@@ -27,7 +27,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "author": {
       "type": "relation",
@@ -43,7 +47,44 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "sourceExcerpt": {
+      "type": "text"
+    },
+    "sourcePublishedAt": {
+      "type": "datetime"
+    },
+    "sourceModifiedAt": {
+      "type": "datetime"
+    },
+    "sourceSeo": {
+      "type": "json"
+    },
+    "sourceHeadings": {
+      "type": "json"
+    },
+    "sourceHeadingCounts": {
+      "type": "json"
+    },
+    "sourceImages": {
+      "type": "json"
+    },
+    "sourceData": {
+      "type": "json"
     }
   }
 }
